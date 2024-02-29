@@ -85,19 +85,19 @@ if(isset($_POST['update'])){
       <input type="hidden" name="pid" value="<?= $fetch_products['id']; ?>">
       <input type="hidden" name="old_image" value="<?= $fetch_products['image']; ?>">
       <img src="../uploaded_img/<?= $fetch_products['image']; ?>" alt="">
-      <span>update name</span>
+      <span>Update name</span>
       <input type="text" required placeholder="enter product name" name="name" maxlength="100" class="box" value="<?= $fetch_products['name']; ?>">
-      <span>update price</span>
+      <span>Update price</span>
       <input type="number" min="0" max="9999999999" required placeholder="enter product price" name="price" onkeypress="if(this.value.length == 10) return false;" class="box" value="<?= $fetch_products['price']; ?>">
-      <span>update category</span>
+      <span>Update category</span>
       <select name="category" class="box" required>
          <option selected value="<?= $fetch_products['category']; ?>"><?= $fetch_products['category']; ?></option>
-         <option value="main dish">Main dish</option>
-         <option value="fast food">Fast food</option>
-         <option value="drinks">Beverages</option>
-         <option value="desserts">Desserts</option>
+         <option value="Main dish">Main dish</option>
+         <option value="Fast food">Fast food</option>
+         <option value="Beverages">Beverages</option>
+         <option value="Desserts">Desserts</option>
       </select>
-      <span>update image</span>
+      <span>Update image</span>
       <input type="file" name="image" class="box" accept="image/jpg, image/jpeg, image/png, image/webp">
       <div class="flex-btn">
          <input type="submit" value="update" class="btn" name="update">
