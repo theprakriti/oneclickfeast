@@ -35,36 +35,7 @@ if(isset($_POST['submit'])){
          $message[] = 'please add your address!';
       }else{
 
-         if($method=="khalti"){
-
-            
-            $payment_amount=($total_price);
-            
-            if($payment_amount<1000){
-               $payment_amount=1000;
-            }
-            $args = http_build_query(array(
-               'token' => 'QUao9cqFzxPgvWJNi9aKac',
-               'amount'  =>$payment_amount
-             ));
-             
-             $url = "https://khalti.com/api/v2/payment/verify/";
-             
-             # Make the call using API.
-             $ch = curl_init();
-             curl_setopt($ch, CURLOPT_URL, $url);
-             curl_setopt($ch, CURLOPT_POST, 1);
-             curl_setopt($ch, CURLOPT_POSTFIELDS,$args);
-             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-             
-             $headers = ['Authorization: Key test_secret_key_245f5c7d808f47048fc41ec432695f18'];
-             curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-             
-             // Response
-             $response = curl_exec($ch);
-             $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-             curl_close($ch);
-         }
+        
          
 
 
@@ -125,6 +96,8 @@ if(isset($_POST['submit'])){
          $cart_items[] = '';
          $select_cart = $conn->prepare("SELECT * FROM `cart` WHERE user_id = ?");
          $select_cart->execute([$user_id]);
+         
+        
          if($select_cart->rowCount() > 0){
             while($fetch_cart = $select_cart->fetch(PDO::FETCH_ASSOC)){
                $cart_items[] = $fetch_cart['name'].' ('.$fetch_cart['price'].' x '. $fetch_cart['quantity'].') - ';
@@ -158,16 +131,28 @@ if(isset($_POST['submit'])){
       <h3>Delivery address</h3>
       <p><i class="fas fa-map-marker-alt"></i><span><?php if($fetch_profile['address'] == ''){echo 'please enter your address';}else{echo $fetch_profile['address'];} ?></span></p>
       <a href="update_address.php" class="btn">update address</a>
+      <?php
+
+if($select_cart->rowCount()>0) {?>
+      <h3>Payment method</h3>
       <select name="method" class="box" required id="paymentmode">
          <option value="" disabled selected>select payment method --</option>
          <option value="cash on delivery">cash on delivery</option>
          <option value="khalti">Pay with Khalti</option>
       </select>
-      <input type="submit" value="place order" id="orderbtn" class="btn <?php if($fetch_profile['address'] == ''){echo 'disabled';} ?>" style="width:100%; background:var(--red); color:var(--white);" name="submit">
 
+    
+      <input type="submit" value="place order" id="orderbtn" class="btn <?php if($fetch_profile['address'] == ''){echo 'disabled';} ?>" style="width:100%; background:var(--red); color:var(--white);" name="submit">
+<?php }?>
    </div>
 
 </form>
+
+<?php
+
+
+
+?>
 
 
 
@@ -178,11 +163,9 @@ if(isset($_POST['submit'])){
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
    <?php
-$payment_amount=($grand_total);
+$payment_amount=($grand_total*10);
 
-if($payment_amount<1000){
-   $payment_amount=1000;
-}
+
 
 
 ?>
@@ -234,8 +217,8 @@ function sendPostRequest(url, data) {
 
 
 
-var config = {
-    // replace the publicKey with yours
+   var config = {
+    // Replace the publicKey with yours
     publicKey: "test_public_key_330813f1d2874d9c9097b4c243ca88d3",
     productIdentity: "1234567890",
     productName: "Dragon",
@@ -249,45 +232,44 @@ var config = {
     ],
     eventHandler: {
         onSuccess: function(payload) {
-            // hit merchant api for initiating verification
-            // console.log(payload);
+            // Hit merchant API for initiating verification
+          
+
+            data['token'] = payload.token;
+
            
-            $.post("khaltipayment.php", data, function(data, status){
-                    $("#result").html(data);
-                });
-
-
-            sendPostRequest(url, data)
-  .then(responseData => {
-    console.log('Response:', responseData); // Handle the response data
-  });
-
-
- 
-
-
-            
+           
+            // AJAX request to send payload data to server
+            $.ajax({
+                url: 'khaltipayment.php',
+                type: 'post',
+                data: data,
+                success: function(response){
+                    
+                  window.location.href = 'checkout.php';
+                }
+            });
         },
         onError: function(error) {
             console.log(error);
         },
         onClose: function() {
-            console.log('widget is closing');
+            console.log('Widget is closing');
         }
     }
 };
 
+var checkout = new KhaltiCheckout(config);
+var btn = document.getElementById("payment-button");
+var paymentmode = document.getElementById('paymentmode');
 
-        var checkout = new KhaltiCheckout(config);
-        var btn = document.getElementById("payment-button");
-        var paymentmode=document.getElementById('paymentmode');
-      
-        paymentmode.onchange = function () {
-            // minimum transaction amount must be 10, i.e 1000 in paisa.
-            if(paymentmode.value=="khalti"){
-            checkout.show({amount: <?php echo $payment_amount ?>});
-            }
-        }
+paymentmode.onchange = function () {
+    // Minimum transaction amount must be 10, i.e 1000 in paisa.
+    if(paymentmode.value == "khalti") {
+        checkout.show({amount: <?php echo $payment_amount ?>});
+    }
+};
+
     </script>
 
 

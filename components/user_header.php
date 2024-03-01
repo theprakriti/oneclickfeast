@@ -1,4 +1,10 @@
 <?php
+
+if(isset($_SESSION['success_message'])){
+   $message = $_SESSION['success_message'];
+   unset($_SESSION['success_message']);
+}
+
 if(isset($message)){
    foreach($message as $message){
       echo '
