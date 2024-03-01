@@ -277,10 +277,6 @@ body{
 }
 
 
-.hero {
-  
-   
-}
 
 .hero .slide{
    
@@ -1003,7 +999,7 @@ body{
 .credit{
    padding:3rem 2rem;
    text-align: center;
-   background-color: var(--lightgreen);
+   background-color: var(--navyblue);
    color:var(--white);
    font-size: 2rem;
    text-transform: capitalize;

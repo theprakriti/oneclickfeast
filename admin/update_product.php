@@ -100,7 +100,7 @@ if(isset($_POST['update'])){
       <span>Update image</span>
       <input type="file" name="image" class="box" accept="image/jpg, image/jpeg, image/png, image/webp">
       <div class="flex-btn">
-         <input type="submit" value="update" class="btn" name="update">
+         <input type="submit" value="update" class="option-btn" name="update">
          <a href="products.php" class="option-btn">go back</a>
       </div>
    </form>
