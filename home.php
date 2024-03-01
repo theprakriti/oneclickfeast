@@ -37,7 +37,7 @@ include 'components/add_cart.php';
 
 
 
-<section class="hero">
+<section class="hero" >
 
    <div class="swiper hero-slider">
 
