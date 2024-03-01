@@ -33,3 +33,4 @@
    <div class="credit">&copy; copyright @ <?= date('Y'); ?> by <span>PSS</span> | all rights reserved!</div>
 
 </footer>
+

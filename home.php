@@ -37,7 +37,7 @@ include 'components/add_cart.php';
 
 
 
-<section class="hero">
+<section class="hero" >
 
    <div class="swiper hero-slider">
 
@@ -47,7 +47,7 @@ include 'components/add_cart.php';
             <div class="content">
                <span>Order Online</span>
                <h3>Delicious Pizza</h3>
-               <a href="menu.php" class="btn">See menus</a>
+               <a href="menu.php" class="btn"  style="font-size: 16px; padding: 10px 20px;">See menus</a>
             </div>
             <div class="image">
                <img src="images/home-img-1.png" alt="">
@@ -154,7 +154,7 @@ include 'components/add_cart.php';
    </div>
 
    <div class="more-btn">
-      <a href="menu.php" class="btn">view all</a>
+      <a href="menu.php" class="btn"  style="font-size: 16px; padding: 10px 20px;">view all</a>
    </div>
 
 </section>

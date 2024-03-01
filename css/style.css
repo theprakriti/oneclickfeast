@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
 
 :root{
+   --lightgreen:#c1f2b0;
+   --abc:#f2e9eb;
+   --pink:#dd8ea4;
+   --peach:#f2dd39;
+   --navyblue:#31383f;
    --yellow:#fed330;
    --red:#e74c3c;
    --white:#fff;
    --black:#222;
    --light-color:#777;
-   --border:.2rem solid var(--black);
+   --border:.1rem solid var(--black);
 }
 
 *{
@@ -267,7 +272,14 @@ section{
    text-decoration: underline;
 }
 
+body{
+   background-color: var(--abc);
+}
+
+
+
 .hero .slide{
+   
    display: flex;
    align-items: center;
    flex-wrap: wrap-reverse;
@@ -307,13 +319,14 @@ section{
 .category .box-container{
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
-   gap:1.5rem;
+   gap:1rem;
    align-items: flex-start;
 }
 
 .category .box-container .box{
+  
    border:var(--border);
-   padding:2rem;
+   padding: 2rem;
    text-align: center;
 }
 
@@ -986,16 +999,16 @@ section{
 .credit{
    padding:3rem 2rem;
    text-align: center;
-   background-color: var(--black);
+   background-color: var(--navyblue);
    color:var(--white);
    font-size: 2rem;
    text-transform: capitalize;
    /* padding-bottom: 10rem; */
 }
-
+/*  
 .credit span{
    color:var(--yellow);
-}
+} */
 
 .loader{
    position: fixed;

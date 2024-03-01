@@ -98,7 +98,7 @@ if(isset($_GET['delete'])){
          <option value="Desserts">Desserts</option>
       </select>
       <input type="file" name="image" class="box" accept="image/jpg, image/jpeg, image/png, image/webp" required>
-      <input type="submit" value="add product" name="add_product" class="btn">
+      <input type="submit" value="add product" name="add_product" class="option-btn">
    </form>
 
 </section>
