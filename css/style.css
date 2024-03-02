@@ -64,24 +64,25 @@ section{
 }
 
 .heading{
+   
    display: flex;
    align-items: center;
    justify-content: center;
    gap:1rem;
    flex-flow: column;
-   background-color: var(--black);
+   background-color: var(--pink); 
    min-height: 20rem;
 }
    
 .heading h3{
    font-size: 5rem;
-   color:var(--white);
+   color:var(--p);
    text-transform: capitalize;
 }
 
 .heading p{
    font-size: 2.3rem;
-   color:var(--light-color);
+   color:var(--black);
 }
 
 .heading p a{
@@ -558,7 +559,7 @@ body{
    padding:1rem 0;
    line-height: 2;
    font-size: 1.6rem;
-   color:var(--light-color);
+   color:var(--black);
 }
 
 .steps .box-container{
@@ -998,7 +999,7 @@ body{
 .credit{
    padding:3rem 2rem;
    text-align: center;
-   background-color: var(--navyblue);
+   background-color: var(--pink);
    color:var(--white);
    font-size: 2rem;
    text-transform: capitalize;
