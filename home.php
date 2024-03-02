@@ -36,8 +36,7 @@ include 'components/add_cart.php';
 <?php include 'components/user_header.php'; ?>
 
 
-
-<section class="hero" >
+ <section class="hero" >
 
    <div class="swiper hero-slider">
 
@@ -82,7 +81,7 @@ include 'components/add_cart.php';
 
    </div>
 
-</section>
+</section> 
 
 <section class="category">
 

@@ -76,7 +76,7 @@ if(isset($_POST['send'])){
       </div>
 
       <form action="" method="post">
-         <h3>Tell us something!</h3>
+         <h3> Send a Feedback</h3>
          <input type="text" name="name" required pattern="[a-zA-Z ]+" title="Please enter only letters and spaces" placeholder="Enter your name" class="box" maxlength="50">
          <input type="email" name="email" required placeholder="Enter your email" class="box" maxlength="50">
          <input type="tel" name="number" required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" placeholder="Enter your number" class="box" maxlength="10">

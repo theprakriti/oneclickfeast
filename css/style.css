@@ -277,7 +277,6 @@ body{
 }
 
 
-
 .hero .slide{
    
    display: flex;
@@ -314,7 +313,7 @@ body{
 
 .swiper-pagination-bullet-active{
    background-color: var(--yellow);
-}
+} 
 
 .category .box-container{
    display: grid;
@@ -651,7 +650,7 @@ body{
 .contact .row form{
    border:var(--border);
    flex:1 1 40rem;
-   padding:2rem;
+   padding:1rem;
    text-align: center;
 }
 
@@ -659,7 +658,7 @@ body{
    font-size: 2.5rem;
    color:var(--black);
    margin-bottom: 1rem;
-   text-transform: capitalize;
+   text-transform: uppercase;
 }
 
 .contact .row form .box{
