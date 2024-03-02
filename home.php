@@ -24,6 +24,8 @@ include 'components/add_cart.php';
 
    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
+   
+
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
@@ -159,6 +161,80 @@ include 'components/add_cart.php';
 
 </section>
 
+<!-- Review Section -->
+<section class="reviews">
+    <h1 class="title">Customer's Reviews</h1>
+    <div class="swiper reviews-slider">
+        <div class="swiper-wrapper">
+            <?php
+            $select_reviews = $conn->prepare("SELECT review.*, users.name FROM review JOIN users ON review.user_id = users.id WHERE review.status='approved' ORDER BY review.id DESC LIMIT 6");
+            $select_reviews->execute();
+
+            
+
+
+           ?>
+
+         
+           <?php
+while ($fetch_reviews = $select_reviews->fetch(PDO::FETCH_ASSOC)) {
+    ?>
+    <div class="swiper-slide slide">
+        <div class="box">
+        <p> <span><?= $fetch_reviews['review']; ?></span></p>
+            <p>-<span><?= $fetch_reviews['name']; ?></span></p>
+
+            <?php
+
+            if($fetch_reviews['stars'] == 1){
+                echo '<p> <span>⭐</span></p>';
+            }else if($fetch_reviews['stars'] == 2){
+                  echo '<p> <span>⭐⭐</span></p>';
+            }else if($fetch_reviews['stars'] == 3){
+
+                  echo '<p> <span>⭐⭐⭐</span></p>';
+            }else if($fetch_reviews['stars'] == 4){
+                  
+                     echo '<p> <span>⭐⭐⭐⭐</span></p>';
+            }else if($fetch_reviews['stars'] == 5){
+                     
+                        echo '<p> <span>⭐⭐⭐⭐⭐</span></p>';
+               }
+            ?>
+          
+           
+
+        </div>
+    </div>
+    <?php
+
+}
+
+?>
+
+          
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <?php
+
+    if(isset($_SESSION['user_id'])){
+      ?>
+
+    <div style="display: flex; justify-content: center;">
+        <a href="addreview.php" style="background-color: yellow; font-size: 16px; padding: 10px 20px; margin: 30px; cursor: pointer;" id="addreviewbtn">Add Review</a>
+    </div>
+    <?php
+
+      }
+
+      ?>
+</section>
+
+
+
+
 
 
 
@@ -186,6 +262,8 @@ include 'components/add_cart.php';
 
 <script>
 
+
+
 var swiper = new Swiper(".hero-slider", {
    loop:true,
    grabCursor: true,
@@ -195,6 +273,31 @@ var swiper = new Swiper(".hero-slider", {
       clickable:true,
    },
 });
+
+
+
+var reviews_swiper = new Swiper(".reviews-slider", {
+   loop:true,
+   grabCursor: true,
+   spaceBetween: 20,
+   pagination: {
+      el: ".swiper-pagination",
+      clickable:true,
+   },
+   breakpoints: {
+      0: {
+      slidesPerView: 1,
+      },
+      700: {
+      slidesPerView: 2,
+      },
+      1024: {
+      slidesPerView: 3,
+      },
+   },
+});
+
+
 
 </script>
 
