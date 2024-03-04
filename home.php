@@ -179,7 +179,7 @@ include 'components/add_cart.php';
 while ($fetch_reviews = $select_reviews->fetch(PDO::FETCH_ASSOC)) {
     ?>
     <div class="swiper-slide slide">
-        <div class="box">
+        <div class="box" >
         <p> <span><?= $fetch_reviews['review']; ?></span></p>
             <p>-<span><?= $fetch_reviews['name']; ?></span></p>
 
