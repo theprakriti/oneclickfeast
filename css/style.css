@@ -977,7 +977,7 @@ body{
    margin-bottom: .5rem;
 }
 
-.footer .grid .box h3{
+.grid .box h3{
    margin:1rem 0;
    font-size: 2rem;
    color:var(--black);
@@ -1001,7 +1001,7 @@ body{
    text-align: center;
    background-color: var(--navyblue);
    color:var(--white);
-   font-size: 2rem;
+   font-size: 1rem;
    text-transform: capitalize;
    /* padding-bottom: 10rem; */
 }
@@ -1025,6 +1025,11 @@ body{
 }
 
 
+.footericons{
+   height: 30px;
+   width: 30px;
+   object-fit: contain;
+}
 
 /* media queries  */
 
