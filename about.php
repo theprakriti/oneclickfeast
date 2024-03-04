@@ -60,6 +60,9 @@ if(isset($_SESSION['user_id'])){
 
 </section>
 
+
+
+
 <!-- about section ends -->
 
 <!-- steps section starts  -->
@@ -93,105 +96,6 @@ if(isset($_SESSION['user_id'])){
 </section>
 
 <!-- steps section ends -->
-
-<!-- reviews section starts  -->
-
-<section class="reviews">
-
-   <h1 class="title">Customer's Reivews</h1>
-
-   <div class="swiper reviews-slider">
-
-      <div class="swiper-wrapper">
-
-         <div class="swiper-slide slide">
-            <img src="images/pic1.jpg" alt="">
-            <p>Effortless ordering, diverse cuisines, and prompt delivery. Seamless experience with real-time tracking. Outstanding!</p>
-            <div class="stars">
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star-half-alt"></i>
-            </div>
-            <h3>Samantha</h3>
-         </div>
-
-         <div class="swiper-slide slide">
-            <img src="images/pic2.jpg" alt="">
-            <p>Quick and convenient. Good food quality and reliable delivery. More vegetarian options would be a plus.</p>
-            <div class="stars">
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-              
-            </div>
-            <h3>Jenny</h3>
-         </div>
-
-         <div class="swiper-slide slide">
-            <img src="images/pic3.jpg" alt="">
-            <p>Decent selection, but delivery time inconsistency. Responsive customer service.</p>
-            <div class="stars">
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star-half-alt"></i>
-            </div>
-            <h3>John</h3>
-         </div>
-
-         <div class="swiper-slide slide">
-            <img src="images/pic4.jpg" alt="">
-            <p>Smooth ordering, reliable delivery. It's a pleasant surprise to get some great deals on my favorite meals.</p>
-            <div class="stars">
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-              
-            </div>
-            <h3>Krishna</h3>
-         </div>
-
-         <div class="swiper-slide slide">
-            <img src="images/pic5.jpg" alt="">
-            <p>Intuitive website, fantastic options, and on-time deliveries. Loyalty program is a nice bonus. Highly recommended!</p>
-            <div class="stars">
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star-half-alt"></i>
-            </div>
-            <h3>Rose</h3>
-         </div>
-
-         <div class="swiper-slide slide">
-            <img src="images/pic6.jpg" alt="">
-            <p>website is user-friendly, deliveries are consistently on time, and the food is top-notch. Can't ask for more!</p>
-            <div class="stars">
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star"></i>
-               <i class="fas fa-star-half-alt"></i>
-            </div>
-            <h3>Shruthi</h3>
-         </div>
-
-      </div>
-
-      <div class="swiper-pagination"></div>
-
-   </div>
-
-</section>
-
-<!-- reviews section ends -->
-
-
 
 
 

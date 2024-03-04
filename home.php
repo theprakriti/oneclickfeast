@@ -160,7 +160,7 @@ include 'components/add_cart.php';
 
 </section>
 
-<!-- Review Section -->
+<!--  Review Section -->
 <section class="reviews">
     <h1 class="title">Customer's Reviews</h1>
     <div class="swiper reviews-slider">
@@ -230,7 +230,6 @@ while ($fetch_reviews = $select_reviews->fetch(PDO::FETCH_ASSOC)) {
 
       ?>
 </section>
-
 
 
 

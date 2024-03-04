@@ -35,6 +35,10 @@ document.querySelectorAll('input[type="number"]').forEach(numberInput => {
 });
 
 
+
+
+
+
 function showLoggedInMessage() {
    alert("You are now logged in!");
 }

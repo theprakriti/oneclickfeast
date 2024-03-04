@@ -55,7 +55,7 @@ if(isset($_GET['delete'])){
 
    <h1 class="heading">Reviews</h1>
 
-   <div class="box-container" style="display: flex;flex-wrap: wrap; gap: 30px;">
+   <div class="box-container"  >
 
    <?php
       $select_reviews = $conn->prepare("SELECT review.*,users.name FROM review JOIN users ON review.user_id=users.id;");
