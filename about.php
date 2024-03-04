@@ -47,13 +47,13 @@ if(isset($_SESSION['user_id'])){
    <div class="row">
 
       <div class="image">
-         <img src="images/chef.jpg" alt="">
+         <img src="images\backg3.jpg" alt="">
       </div>
 
       <div class="content">
          <h3>Why choose us?</h3>
          <p>Choose us for effortless online food ordering. Enjoy a seamless experience with our diverse menu, quick delivery, and a commitment to delivering fresh, flavorful meals right to your doorstep.</p>
-         <a href="menu.php" class="btn">Our menu</a>
+         <a href="menu.php" class="btn " style="font-size: 16px; padding: 10px 20px;">Our menu</a>
       </div>
 
    </div>
