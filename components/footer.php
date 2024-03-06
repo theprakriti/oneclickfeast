@@ -2,7 +2,7 @@
 
 <hr>
 
-   <section style="display: flex;justify-content: space-around;background-color: whitesmoke;width: 100vw!important;">
+   <div style="display: flex;justify-content: space-around;background-color: whitesmoke;width: 100vw;padding: 20px;">
 
       <div style="display: flex;flex-direction: column;align-items: center;">
          <img src="images/emailicon.png" style="height: 30px;width: 20px;object-fit: contain;" alt="">
@@ -30,7 +30,7 @@
          
       </div>
 
-   </section>
+</div>
 
    <div class="credit">
       <p style="font-size: medium;">&copy; copyright @ <?= date('Y'); ?> by <span>OneClick Feast</span> | all rights reserved!</p>

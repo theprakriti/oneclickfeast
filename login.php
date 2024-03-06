@@ -23,6 +23,8 @@ if(isset($_POST['submit'])){
 
    if($select_user->rowCount() > 0){
       $_SESSION['user_id'] = $row['id'];
+
+      $_SESSION['login_success'] = 'You are now logged in!';
       header('location:home.php');
    }else{
       $message[] = 'incorrect username or password!';
@@ -56,7 +58,7 @@ if(isset($_POST['submit'])){
 
 <section class="form-container">
 
-   <form action="" method="post" onsubmit="showLoggedInMessage()">
+   <form action="" method="post">
       <h3>Login now</h3>
       <input type="email" name="email" required placeholder="enter your email" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="password" name="pass" required placeholder="enter your password" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
@@ -66,6 +68,7 @@ if(isset($_POST['submit'])){
    </form>
 
 </section>
+
 
 
 

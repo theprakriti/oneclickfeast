@@ -40,6 +40,8 @@ if(isset($_POST['submit'])){
          $row = $select_user->fetch(PDO::FETCH_ASSOC);
          if($select_user->rowCount() > 0){
             $_SESSION['user_id'] = $row['id'];
+
+            $_SESSION['registered_success']='You are now registered!';
             header('location:home.php');
          }
       }
@@ -72,7 +74,7 @@ if(isset($_POST['submit'])){
 
 <section class="form-container">
 
-   <form action="" method="post" onsubmit="showRegisteredMessage()">
+   <form action="" method="post" >
       <h3>register now</h3>
       <input type="text" name="name" required pattern="[a-zA-Z ]+" title="Please enter only letters and spaces" placeholder="enter your name" class="box" maxlength="50">
   <input type="email" name="email" required placeholder="enter your email" class="box" maxlength="50">

@@ -259,6 +259,27 @@ while ($fetch_reviews = $select_reviews->fetch(PDO::FETCH_ASSOC)) {
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
 
+
+<script>
+
+   <?php
+      
+      if(isset($_SESSION['login_success'])){
+         echo "alert('".$_SESSION['login_success']."')";
+      }
+
+      unset($_SESSION['login_success']);
+
+      if(isset($_SESSION['registered_success'])){
+         echo "alert('".$_SESSION['registered_success']."')";
+      }
+
+
+      unset($_SESSION['registered_success']);
+     
+      ?>
+</script>
+
 <script>
 
 
