@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
 
 :root{
-   --lightgreen:#c1f2b0;
+   --lightgreen:#9BCF53;
    --abc:#f2e9eb;
    --pink:#dd8ea4;
    --peach:#f2dd39;
@@ -64,7 +64,8 @@ section{
 }
 
 .heading{
-   
+  
+   color: var(--black);
    display: flex;
    align-items: center;
    justify-content: center;
@@ -75,9 +76,10 @@ section{
 }
    
 .heading h3{
+   
    font-size: 5rem;
    color:var(--p);
-   text-transform: capitalize;
+   text-transform: none;
 }
 
 .heading p{
@@ -278,7 +280,7 @@ body{
 }
 
 
-.hero .slide{
+ .hero .slide{
    
    display: flex;
    align-items: center;
@@ -314,7 +316,16 @@ body{
 
 .swiper-pagination-bullet-active{
    background-color: var(--yellow);
-} 
+}  
+
+
+
+.category h1 {
+   font-style: italic;
+   color: var(--pink);
+   text-decoration:underline;
+   text-transform: none;
+}
 
 .category .box-container{
    display: grid;
@@ -354,6 +365,16 @@ body{
 .category .box-container .box:hover h3{
    color:var(--white);
 }
+
+
+
+.products h1 {
+   font-style: italic;
+   color: var(--pink);
+   text-decoration:underline;
+   text-transform: none;
+}
+
 
 .products .box-container{
    display: grid;
@@ -560,6 +581,13 @@ body{
    line-height: 2;
    font-size: 1.6rem;
    color:var(--black);
+}
+
+
+.steps h1 {
+   text-transform: none;
+   color: var(--pink);
+   font-style: italic;
 }
 
 .steps .box-container{
@@ -909,7 +937,13 @@ body{
 
 
 
-
+.reviews h1 {
+   font-style: italic;
+   color: var(--pink);
+   text-decoration:underline;
+   text-transform: none;
+   
+}
 .reviews .slide{
    margin-bottom: 4rem;
    border:var(--border);
@@ -970,6 +1004,10 @@ body{
    display: flex;
    flex-direction: column;
    align-items: center;
+}
+
+.contact-item a {
+   color: var(--light-color);
 }
 
 .contact-item img {
