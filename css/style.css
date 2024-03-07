@@ -321,7 +321,7 @@ body{
 
 
 .category h1 {
-   font-style: italic;
+   
    color: var(--pink);
    text-decoration:underline;
    text-transform: none;
@@ -369,7 +369,7 @@ body{
 
 
 .products h1 {
-   font-style: italic;
+   
    color: var(--pink);
    text-decoration:underline;
    text-transform: none;
@@ -587,7 +587,7 @@ body{
 .steps h1 {
    text-transform: none;
    color: var(--pink);
-   font-style: italic;
+   
 }
 
 .steps .box-container{
@@ -938,7 +938,7 @@ body{
 
 
 .reviews h1 {
-   font-style: italic;
+  
    color: var(--pink);
    text-decoration:underline;
    text-transform: none;
@@ -983,6 +983,27 @@ body{
    color:var(--black);
 }
 
+
+
+
+.center-container {
+   display: flex;
+   justify-content: center;
+}
+
+#addreviewbtn {
+   background-color: var(--yellow);
+   color: var(--black);
+   font-size: 16px;
+   padding: 10px 20px;
+   margin: 30px;
+   cursor: pointer;
+   text-decoration: none; /* Remove default underline for anchor tags */
+}
+#addreviewbtn:hover {
+   letter-spacing:.2rem;
+
+}
 
 .footer hr {
    
