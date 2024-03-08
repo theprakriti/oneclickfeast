@@ -50,8 +50,8 @@ if(isset($_POST['submit'])){
       <h3>Your address</h3>
       <input type="text" class="box" placeholder="city name" required maxlength="50" name="city">
       <input type="text" class="box" placeholder="area name" required maxlength="50" name="area">
-       <input type="text" class="box" placeholder="country name" required maxlength="50" name="country">
-      <input type="number" class="box" placeholder="pin code" required max="999999" min="0" maxlength="6" name="pin_code">
+      <!-- <input type="text" class="box" placeholder="country name" required maxlength="50" name="country"> -->
+      
       <input type="submit" value="save address" name="submit" class="btn">
    </form>
 

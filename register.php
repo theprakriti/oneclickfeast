@@ -77,11 +77,11 @@ if(isset($_POST['submit'])){
    <form action="" method="post" >
       <h3>register now</h3>
       <input type="text" name="name" required pattern="[a-zA-Z ]+" title="Please enter only letters and spaces" placeholder="enter your name" class="box" maxlength="50">
-  <input type="email" name="email" required placeholder="enter your email" class="box" maxlength="50">
-  <input type="tel" name="number" required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" placeholder="enter your number" class="box" maxlength="10">
-  <input type="password" name="pass" required pattern=".{8,}" title="Password must be at least 8 characters" placeholder="enter your password" class="box" maxlength="50">
-  <input type="password" name="cpass" required pattern=".{8,}" title="Password must be at least 8 characters" placeholder="confirm your password" class="box" maxlength="50">
-  <input type="submit" value="register now" name="submit" class="btn">
+      <input type="email" name="email" required placeholder="enter your email" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="tel" name="number" required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" placeholder="enter your number" class="box" maxlength="10">
+      <input type="password" name="pass" required pattern=".{8,}" title="Password must be at least 8 characters" placeholder="enter your password" class="box" maxlength="50">
+      <input type="password" name="cpass" required pattern=".{8,}" title="Password must be at least 8 characters" placeholder="confirm your password" class="box" maxlength="50">
+      <input type="submit" value="register now" name="submit" class="btn">
 
       <p>already have an account? <a href="login.php">login now</a></p>
    </form>
