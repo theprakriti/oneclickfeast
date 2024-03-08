@@ -286,7 +286,7 @@ body{
    align-items: center;
    flex-wrap: wrap-reverse;
    gap:2rem;
-   margin-bottom: 4rem;
+   margin-bottom: 2rem;
 }
 
 .hero .slide .image{
