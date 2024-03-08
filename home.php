@@ -38,44 +38,26 @@ include 'components/add_cart.php';
 <?php include 'components/user_header.php'; ?>
 
 
- <section class="hero" >
+ <div class="hero" >
 
    <div class="swiper hero-slider">
 
       <div class="swiper-wrapper">
 
          <div class="swiper-slide slide">
-            <div class="content">
-               <span>Order Online</span>
-               <h3>Delicious Pizza</h3>
-               <a href="menu.php" class="btn"  style="font-size: 16px; padding: 10px 20px;">See menus</a>
-            </div>
+            
             <div class="image">
-               <img src="images/home-img-1.png" alt="">
+               <img src="images/backg4.jpg" style="width: 100vw;height: 420px;object-fit: cover;" alt="">
+            </div>
+
+            <div style="position: absolute;left: 27%;text-align: center;">
+               <h1 class="title">Welcome to OneClick Feast</h1>
+               <p >Order your favorite food from your favorite restaurant with just one click!</p>
+              
             </div>
          </div>
 
-         <div class="swiper-slide slide">
-            <div class="content">
-               <span>Order Online</span>
-               <h3>Cheesey Hamburger</h3>
-               <a href="menu.php" class="btn">See menus</a>
-            </div>
-            <div class="image">
-               <img src="images/home-img-2.png" alt="">
-            </div>
-         </div>
-
-         <div class="swiper-slide slide">
-            <div class="content">
-               <span>Order Online</span>
-               <h3>Rosted Chicken</h3>
-               <a href="menu.php" class="btn">See menus</a>
-            </div>
-            <div class="image">
-               <img src="images/home-img-3.png" alt="">
-            </div>
-         </div>
+        
 
       </div>
 
@@ -83,7 +65,7 @@ include 'components/add_cart.php';
 
    </div>
 
-</section> 
+</div> 
 
 <section class="category">
 
@@ -137,7 +119,7 @@ include 'components/add_cart.php';
          <input type="hidden" name="image" value="<?= $fetch_products['image']; ?>">
          <a href="quick_view.php?pid=<?= $fetch_products['id']; ?>" class="fas fa-eye"></a>
          <button type="submit" class="fas fa-shopping-cart" name="add_to_cart"></button>
-         <img src="uploaded_img/<?= $fetch_products['image']; ?>" alt="">
+         <img src="uploaded_img/<?= $fetch_products['image']; ?>" alt="" style="height: 200px;width: 100%;object-fit: cover;">
          <a href="category.php?category=<?= $fetch_products['category']; ?>" class="cat"><?= $fetch_products['category']; ?></a>
          <div class="name"><?= $fetch_products['name']; ?></div>
          <div class="flex">
@@ -155,7 +137,7 @@ include 'components/add_cart.php';
    </div>
 
    <div class="more-btn">
-      <a href="menu.php" class="btn"  style="font-size: 16px; padding: 10px 20px;">view all</a>
+      <a href="menu.php" class="btn"  style="font-size: 16px; padding: 10px 20px;">View all</a>
    </div>
 
 </section>
