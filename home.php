@@ -38,7 +38,9 @@ include 'components/add_cart.php';
 <?php include 'components/user_header.php'; ?>
 
 
+
  <div class="hero" >
+
 
    <div class="swiper hero-slider">
 
@@ -202,10 +204,14 @@ while ($fetch_reviews = $select_reviews->fetch(PDO::FETCH_ASSOC)) {
 
     if(isset($_SESSION['user_id'])){
       ?>
-
-    <div style="display: flex; justify-content: center;">
-        <a href="addreview.php" style="background-color: yellow; font-size: 16px; padding: 10px 20px; margin: 30px; cursor: pointer;" id="addreviewbtn">Add Review</a>
+    
+    <div class="center-container">
+        <a href="addreview.php" id="addreviewbtn">Add Review</a>
     </div>
+
+    <!-- <div style="display: flex; justify-content: center;">
+        <a href="addreview.php" style="background-color: yellow; font-size: 16px; padding: 10px 20px; margin: 30px; cursor: pointer;" id="addreviewbtn">Add Review</a>
+    </div> -->
     <?php
 
       }
