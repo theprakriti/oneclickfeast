@@ -299,7 +299,7 @@ body{
 
 .hero .slide .content{
    flex:1 1 40rem;
-   text-align: center;
+   text-align: justify;
 }
 
 .hero .slide .content span{

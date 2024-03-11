@@ -26,6 +26,7 @@ if(isset($message)){
          <a href="messages.php">Messages</a>
          <a href="analytics.php">Analytics</a>
          <a href="reviews.php">Reviews</a>
+         <a href="aboutus.php">About Us </a>
       </nav>
 
       <div class="icons">
