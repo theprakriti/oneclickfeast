@@ -130,7 +130,7 @@ if(isset($_POST['submit'])){
       <a href="update_profile.php" class="btn">Update Info</a>
       <h3>Delivery address</h3>
       <p><i class="fas fa-map-marker-alt"></i><span><?php if($fetch_profile['address'] == ''){echo 'please enter your address';}else{echo $fetch_profile['address'];} ?></span></p>
-      <a href="update_address.php" class="btn">update address</a>
+      <a href="update_address.php" class="btn">Update address</a>
       <?php
 
 if($select_cart->rowCount()>0) {?>
