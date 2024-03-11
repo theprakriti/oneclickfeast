@@ -37,7 +37,9 @@ if(isset($_POST['submit'])){
       $message[] = 'email must be at least 8 characters!';
    }elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
       $message[] = 'email must be a valid email address!';
-   }elseif(!preg_match("/^[0-9]{10}$/", $number)){
+   }elseif (!preg_match("/^[a-zA-Z][a-zA-Z0-9._%+-]*@[a-zA-Z.-]+\.[a-zA-Z]{2,}$/", $email)) {
+      $message[] = 'Email must be a valid email address in proper format!';
+  }elseif(!preg_match("/^[0-9]{10}$/", $number)){
       $message[] = 'number must be a valid 10-digit phone number!';
    }elseif(strlen($number) < 10){
       $message[] = 'number must be at least 10 characters!';
