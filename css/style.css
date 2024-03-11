@@ -770,7 +770,7 @@ body{
 .orders .box-container{
    display: flex;
    flex-wrap: wrap;
-   gap:1.5rem;
+   gap:1rem;
    align-items: flex-start;
 }
 
@@ -783,7 +783,7 @@ body{
 .orders .box-container .box p{
    line-height: 1.5;
    margin:1rem 0;
-   font-size: 2rem;
+   font-size: 1.5rem;
    color:var(--light-color);
 }
 
@@ -1050,11 +1050,9 @@ body{
 
 .credit span{
    color:var(--yellow);
-}  */
+}  
 
-
-
-
+/* 
 .loader{
    position: fixed;
    top:0; left:0; right:0; bottom: 0;
@@ -1067,7 +1065,7 @@ body{
 
 .loader img{
    height: 25rem;
-}
+} */
 
 
 

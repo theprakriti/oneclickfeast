@@ -103,6 +103,8 @@ $cpass=$_POST['cpass'];
   <input type="password" name="cpass" required pattern=".{8,}" title="Password must be at least 8 characters" placeholder="confirm your password" class="box" maxlength="50" value="<?=$cpass?>">
   <input type="submit" value="register now" name="submit" class="btn">
 
+
+
       <p>already have an account? <a href="login.php">login now</a></p>
    </form>
 
