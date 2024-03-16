@@ -1142,5 +1142,13 @@ body{
       gap:0;
    }   
 
+   .contact-info {
+      padding:1.5rem;
+      justify-content: center;
+   }
+
+
+
+
 }
 
