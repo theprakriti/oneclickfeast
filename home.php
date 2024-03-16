@@ -45,15 +45,19 @@ include 'components/add_cart.php';
 
          <div class="swiper-slide slide">
             <div class="image">
-               <img src="images/backg4.jpg" style="width: 100vw;height: 420px;object-fit: cover;" alt="">
+               <img src="images\bg-1.jpg" style="width: 100vw;height: 420px;object-fit: cover;" alt="">
             </div>
 
-            <div style="position: absolute;left: 27%;text-align: center;">
-               <h1 class="title">Welcome to OneClick Feast</h1>
-               <p >Order your favorite food from your favorite restaurant with just one click!</p>
-              
+            <div style="position: absolute;left: 5%;text-align: center;">
+               <h2 class="front">Satisfy Your Cravings Instantly!</h2>
+               <p style= "font-size: 1.5rem">Craving perfection on a plate?<br> You're in the right place! Dive into our menu and savor the magic we serve.  </p>
+               <div class="more-btn">
+      <a href="menu.php" class="btn"  style="font-size: 16px; padding: 10px 20px;">See menu</a>
+   </div>
             </div>
+            
         </div>
+        
 
          </div>
 
