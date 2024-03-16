@@ -104,7 +104,7 @@ $cpass=$_POST['cpass'];
   <input type="email" name="email" required placeholder="enter your email" class="box" maxlength="50" value="<?=$email?>">
   <input type="tel" name="number" required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" placeholder="enter your number" class="box" maxlength="10" value="<?=$number?>">
   <input type="password" name="pass" 
-  required pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/"
+  required 
    title="Password must contain at least one uppercase letter, one lowercase letter, one number, and one symbol."
     placeholder="enter your password" class="box" maxlength="50" value="<?=$pass?>">
   <input type="password" name="cpass" required pattern=".{8,}" title="Password must be at least 8 characters" placeholder="confirm your password" class="box" maxlength="50" value="<?=$cpass?>">

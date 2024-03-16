@@ -3,7 +3,8 @@
 
 <hr>
 
-   <div class="contact-info " >
+   <div class="contact-info "  style="display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));">
 
       <div class="contact-item">
          <img src="images/emailicon.png" alt="Email Icon" >

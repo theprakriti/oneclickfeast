@@ -1013,7 +1013,8 @@ body{
 }
 
 .contact-info {
-   display: flex;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
    padding: 20px;
    justify-content: space-around;
    background-color: var(--pink);
@@ -1142,5 +1143,11 @@ body{
       gap:0;
    }   
 
+
+
+
+
 }
+
+
 
