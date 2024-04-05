@@ -37,35 +37,52 @@ include 'components/add_cart.php';
 
 <?php include 'components/user_header.php'; ?>
 
- <div class="hero" >
+<section class="hero" >
 
-   <div class="swiper hero-slider">
+<div class="swiper hero-slider">
 
-      <div class="swiper-wrapper">
+   <div class="swiper-wrapper">
 
-         <div class="swiper-slide slide">
-            <div class="image">
-               <img src="images\bg-1.jpg" style="width: 100vw;height: 420px;object-fit: cover;" alt="">
-            </div>
-
-            <div style="position: absolute;left: 5%;text-align: center;">
-               <h2 class="front">Satisfy Your Cravings Instantly!</h2>
-               <p style= "font-size: 1.5rem">Craving perfection on a plate?<br> You're in the right place! Dive into our menu and savor the magic we serve.  </p>
-               <div class="more-btn">
-      <a href="menu.php" class="btn"  style="font-size: 16px; padding: 10px 20px;">See menu</a>
-   </div>
-            </div>
-            
-        </div>
-        
-
+      <div class="swiper-slide slide">
+         <div class="content">
+            <span>Order Online</span>
+            <h3>Delicious Pizza</h3>
+            <a href="menu.php" class="btn"  style="font-size: 16px; padding: 10px 20px;">See menus</a>
          </div>
-
-          <div class="swiper-pagination"></div>
-
+         <div class="image">
+            <img src="images/home-img-1.png" alt="">
+         </div>
       </div>
 
-    </div>  
+      <div class="swiper-slide slide">
+         <div class="content">
+            <span>Order Online</span>
+            <h3>Cheesey Hamburger</h3>
+            <a href="menu.php" class="btn">See menus</a>
+         </div>
+         <div class="image">
+            <img src="images/home-img-2.png" alt="">
+         </div>
+      </div>
+
+      <div class="swiper-slide slide">
+         <div class="content">
+            <span>Order Online</span>
+            <h3>Rosted Chicken</h3>
+            <a href="menu.php" class="btn">See menus</a>
+         </div>
+         <div class="image">
+            <img src="images/home-img-3.png" alt="">
+         </div>
+      </div>
+
+   </div>
+
+   <div class="swiper-pagination"></div>
+
+</div>
+
+</section>
 
 <section class="category">
 
