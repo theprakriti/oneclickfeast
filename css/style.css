@@ -53,6 +53,18 @@ section{
    padding:2rem;
 }
 
+.front {
+   text-align: center;
+   font-size: 3rem;
+   color: var(--pink);
+   text-decoration: none;
+   text-transform: none;
+   margin-bottom: 2rem;
+
+}
+
+
+
 .title{
    text-align: center;
    margin-bottom: 2.5rem;
@@ -370,7 +382,7 @@ body{
 
 .products h1 {
    
-   color: var(--pink);
+   color: var(--black);
    text-decoration:underline;
    text-transform: none;
 }
@@ -1142,8 +1154,6 @@ body{
       flex-flow: column;
       gap:0;
    }   
-
-
 
 
 

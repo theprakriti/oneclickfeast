@@ -21,7 +21,7 @@ if(isset($message)){
 
    <section class="flex">
 
-      <a href="home.php" class="logo">OneClick Feast</a>
+      <a href="home.php" class="logo">One<b style="color:#dd8ea4">Click</b> Feast</a>
 
       <nav class="navbar">
          <a href="home.php">Home</a>

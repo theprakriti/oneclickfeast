@@ -24,17 +24,35 @@ if(isset($_POST['submit'])){
    
    if($select_admin->rowCount() > 0){
       $message[] = 'username already exists!';
-   }else{
+   }elseif(strlen($name) < 3){
+      $message[] = 'name must be at least 3 characters!';
+   }elseif(strlen($pass) < 8){
+      $message[] = 'password must be at least 8 characters!';
+   }elseif(strlen($cpass) < 8){
+      $message[] = 'confirm password must be at least 8 characters!';
+   } else{
       if($pass != $cpass){
-         $message[] = 'confirm passowrd not matched!';
+         $message[] = 'confirm password not matched!';
       }else{
          $insert_admin = $conn->prepare("INSERT INTO `admin`(name, password) VALUES(?,?)");
-         $insert_admin->execute([$name, $cpass]);
-         $message[] = 'new admin registered!';
+              $insert_admin->execute([$name, $cpass]);
+             $message[] = 'new admin registered!';
+         }
       }
    }
+   // if($select_admin->rowCount() > 0){
+   //    $message[] = 'username already exists!';
+   // }else{
+   //    if($pass != $cpass){
+   //       $message[] = 'confirm passowrd not matched!';
+   //    }else{
+   //       $insert_admin = $conn->prepare("INSERT INTO `admin`(name, password) VALUES(?,?)");
+   //       $insert_admin->execute([$name, $cpass]);
+   //       $message[] = 'new admin registered!';
+   //    }
+   // }
 
-}
+
 
 ?>
 
