@@ -20,6 +20,19 @@ if(isset($_POST['update_payment'])){
 
 }
 
+if(isset($_GET['order_type']) && isset($_GET['order_value'])){
+   $order_type = $_GET['order_type'];
+   $order_value = $_GET['order_value'];
+   $select_orders = $conn->prepare("SELECT * FROM `orders` ORDER BY $order_type $order_value");
+   $select_orders->execute();
+
+
+
+}else{
+   $select_orders = $conn->prepare("SELECT * FROM `orders`");
+   $select_orders->execute();
+}
+
 if(isset($_GET['delete'])){
    $delete_id = $_GET['delete'];
    $delete_order = $conn->prepare("DELETE FROM `orders` WHERE id = ?");
@@ -52,13 +65,44 @@ if(isset($_GET['delete'])){
 
 <section class="placed-orders">
 
-   <h1 class="heading">placed orders</h1>
+  <div style="display: flex; justify-content: space-between;">
+  <h1 class="heading">placed orders</h1>
 
+  <div>
+   <h2>Sorting</h2>
+    <form action="" method="get" class="box" style="display: flex; align-items: center;">
+        <div class="form-group">
+            <label for="search">Select Type</label><br>
+            <select class="form-input drop-down" name="order_type" id="order_type">
+                <option value=""  disabled>select type</option>
+                <option value="user_id"  <?php $_GET['order_type']=='user_id' ? 'selected': '';?> >user id</option>
+                <option value="name"  <?php $_GET['order_type']=='name' ? 'selected': '';?>>name</option>
+                <option value="number" <?php $_GET['order_type']=='number' ? 'selected': '';?>>number</option>
+                <option value="total_price" <?php $_GET['order_type']=='total_price' ? 'selected': '';?>>total price</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="">Select Value</label><br>
+            <select name="order_value" id="">
+                <option value=""  disabled>select value</option>
+                <option value="ASC" <?php $_GET['order_value']=='ASC' ? 'selected': '';?>>Ascending</option>
+                <option value="DESC"  <?php $_GET['order_value']=='DESC' ? 'selected': '';?>>Descending</option>
+            </select>
+        </div>
+
+        <div>
+            <input type="submit" name="btnSortOrder" value="sort" class="btn">
+        </div>
+    </form>
+</div>
+
+
+  </div>
    <div class="box-container">
 
    <?php
-      $select_orders = $conn->prepare("SELECT * FROM `orders`");
-      $select_orders->execute();
+      
       if($select_orders->rowCount() > 0){
          while($fetch_orders = $select_orders->fetch(PDO::FETCH_ASSOC)){
    ?>
