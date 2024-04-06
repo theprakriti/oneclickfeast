@@ -60,6 +60,8 @@ section{
    padding:2rem;
 }
 
+
+
 .btn,
 .delete-btn,
 .option-btn{
@@ -92,6 +94,7 @@ section{
 .option-btn:hover{
    background-color: var(--yellow);
 }
+
 
 .flex-btn{
    display: flex;

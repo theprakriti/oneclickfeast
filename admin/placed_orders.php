@@ -56,6 +56,20 @@ if(isset($_GET['delete'])){
    <!-- custom css file link  -->
    <link rel="stylesheet" href="../css/admin_style.css">
 
+   <style>
+      .form-select{
+         padding: 10px;
+         margin: 10px 0;
+         border: 1px solid #333;
+         border-radius: 5px;
+      }
+
+      .form-label{
+         font-size: 1.4rem;
+         font-weight: 500;
+      }
+   </style>
+
 </head>
 <body>
 
@@ -69,25 +83,34 @@ if(isset($_GET['delete'])){
   <h1 class="heading">placed orders</h1>
 
   <div>
-   <h2>Sorting</h2>
-    <form action="" method="get" class="box" style="display: flex; align-items: center;">
+ <div style="display: flex;justify-content: space-between;">
+ <h2>Sorting</h2>
+   <h2>
+      <?php
+
+      if(isset($_GET['order_type']) && isset($_GET['order_value'])){
+         echo $_GET['order_type'].' : '.$_GET['order_value'];
+      }
+      ?></h2>
+ </div>
+    <form action="" method="get" class="box" style="display: flex; align-items: center;margin-block: 10px;">
         <div class="form-group">
-            <label for="search">Select Type</label><br>
-            <select class="form-input drop-down" name="order_type" id="order_type">
-                <option value=""  disabled>select type</option>
-                <option value="user_id"  <?php $_GET['order_type']=='user_id' ? 'selected': '';?> >user id</option>
-                <option value="name"  <?php $_GET['order_type']=='name' ? 'selected': '';?>>name</option>
-                <option value="number" <?php $_GET['order_type']=='number' ? 'selected': '';?>>number</option>
-                <option value="total_price" <?php $_GET['order_type']=='total_price' ? 'selected': '';?>>total price</option>
+            <label for="search" class="form-label" >Select Type</label><br>
+            <select class="form-select drop-down" name="order_type" id="order_type">
+                <option value=""  disabled  selected >select type</option>
+                <option value="user_id"  <?php isset($_GET['order_type']) && $_GET['order_type']=='user_id' ? 'selected': '';?> >user id</option>
+                <option value="name"  <?php isset($_GET['order_type']) && $_GET['order_type']=='name' ? 'selected': '';?>>name</option>
+                <option value="number" <?php isset($_GET['order_type']) && $_GET['order_type']=='number' ? 'selected': '';?>>number</option>
+                <option value="total_price" <?php isset($_GET['order_type']) && $_GET['order_type']=='total_price' ? 'selected': '';?>>total price</option>
             </select>
         </div>
 
         <div class="form-group">
-            <label for="">Select Value</label><br>
-            <select name="order_value" id="">
-                <option value=""  disabled>select value</option>
-                <option value="ASC" <?php $_GET['order_value']=='ASC' ? 'selected': '';?>>Ascending</option>
-                <option value="DESC"  <?php $_GET['order_value']=='DESC' ? 'selected': '';?>>Descending</option>
+            <label for="" class="form-label">Select Value</label><br>
+            <select class="form-select" name="order_value " id="">
+                <option value=""   disabled>select value</option>
+                <option value="ASC" <?php isset($_GET['order_value']) && $_GET['order_value']=='ASC' ? 'selected': '';?>>Ascending</option>
+                <option value="DESC"  <?php isset($_GET['order_value']) && $_GET['order_value']=='DESC' ? 'selected': '';?>>Descending</option>
             </select>
         </div>
 
@@ -95,6 +118,7 @@ if(isset($_GET['delete'])){
             <input type="submit" name="btnSortOrder" value="sort" class="btn">
         </div>
     </form>
+   
 </div>
 
 
