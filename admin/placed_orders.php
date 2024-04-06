@@ -20,7 +20,12 @@ if(isset($_POST['update_payment'])){
 
 }
 
-if(isset($_GET['order_type']) && isset($_GET['order_value'])){
+
+if(isset($_GET['btnSortOrder'])){
+
+   
+
+  
    $order_type = $_GET['order_type'];
    $order_value = $_GET['order_value'];
    $select_orders = $conn->prepare("SELECT * FROM `orders` ORDER BY $order_type $order_value");
@@ -97,7 +102,7 @@ if(isset($_GET['delete'])){
         <div class="form-group">
             <label for="search" class="form-label" >Select Type</label><br>
             <select class="form-select drop-down" name="order_type" id="order_type">
-                <option value=""  disabled  selected >select type</option>
+                <option value=""  disabled   >select type</option>
                 <option value="user_id"  <?php isset($_GET['order_type']) && $_GET['order_type']=='user_id' ? 'selected': '';?> >user id</option>
                 <option value="name"  <?php isset($_GET['order_type']) && $_GET['order_type']=='name' ? 'selected': '';?>>name</option>
                 <option value="number" <?php isset($_GET['order_type']) && $_GET['order_type']=='number' ? 'selected': '';?>>number</option>
@@ -107,7 +112,7 @@ if(isset($_GET['delete'])){
 
         <div class="form-group">
             <label for="" class="form-label">Select Value</label><br>
-            <select class="form-select" name="order_value " id="">
+            <select class="form-select" name="order_value" id="">
                 <option value=""   disabled>select value</option>
                 <option value="ASC" <?php isset($_GET['order_value']) && $_GET['order_value']=='ASC' ? 'selected': '';?>>Ascending</option>
                 <option value="DESC"  <?php isset($_GET['order_value']) && $_GET['order_value']=='DESC' ? 'selected': '';?>>Descending</option>
